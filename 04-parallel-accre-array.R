@@ -5,10 +5,10 @@ args <- as.numeric(args)
 # Load packages
 .libPaths("~/R/rlib")
 source("01-functions.R")
-sim_settings <- readRDS("sim-settings.RDS")
 
 # Select row of sim
-params <- readRDS("sim-settings.RdS")[args,] %>% as.list
+sim_settings <- readRDS("sim-settings.RDS")
+params <- sim_settings[args,] %>% as.list
 
 # Set seed
 set.seed(args)

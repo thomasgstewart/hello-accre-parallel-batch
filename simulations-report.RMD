@@ -1,0 +1,33 @@
+---
+title: "Central Limit Shortcut"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The central limit theorem is a powerful tool in data science.  It provides an approximate sampling distribution of the sample mean and other summary measures expressable as a sample mean such as a proportion or a rate per unit time.  The theorem is a statement about the sampling distribution of the mean as the sample size gets large; for the theorem to hold, a number of conditions about the underlying random variable must be true.  
+
+1. Observations are indenpendent and identically distributed
+1. The mean and variance of the underlying random variable must exist
+
+If these conditions hold, then the sampling distribution of the mean is approximately normally distributed.  The approximation improves as the sample size gets larger.
+
+In practice, the sample size is finite and the approximation will not be perfect.  In this simulation, we consider factors that may impact the quality of the central limit theorem approximation of the sampling distribution.  Specifically, we consider 
+
+1. The skew of the underlying distribution of the data
+1. The sample size
+
+To access the quality of the approximation, we record the coverage probability of 95% confidence intervals created with the CLT shortcut.  We also record which side of the interval (left or right) fails to capture the true mean.  A well calibrated symmetric interval should fail in equal proportions in both tails.
+
+## A 4 $\times$ 4 $\times$ 5 factorial design
+
+The data for this simulation are generated from a gamma distribution with 4 different values for the shape parameter and with 5 different values for the scale parameter.  The sample size values are 30, 100, 200, 1000.  All possible combinations of shape, scale, and sample size are evaluated.  There are a total of 80 simulation settings.
+
+## Simulation parameters
+
+For each combination of shape, scale, and sample size, 50000 replicate datasets are generated.  For each simulated dataset, the 95% confidence interval constructed with the central limit theorem shortcut.  The location of the true mean in relation to the interval is recorded for each dataset.
+
+## Results
+

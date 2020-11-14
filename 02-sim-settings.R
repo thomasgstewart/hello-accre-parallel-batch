@@ -1,5 +1,5 @@
 sim_settings <- expand.grid(
-    M = 5000
+    M = 50000
   , N = c(30, 100, 200, 1000)
   , shape = c(0.5, 1, 2, 3)
   , scale = 1:5

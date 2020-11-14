@@ -28,5 +28,4 @@ Mreps <- function(params){
     factor(levels = c(-1,0,1)) %>% table
 }
 
-
 `%|%` <- function(a,b) paste0(a,b)

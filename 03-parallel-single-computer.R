@@ -18,6 +18,8 @@ g <- foreach(
 }
 stopCluster(cl)
 
+# Save results
+date_time <- Sys.time() %>% format(format = "%Y-%m-%d-%H-%M-%S",.)
 "sim-results-DATE.RDS" %>% 
-  gsub("DATE",Sys.Date(),.) %>% 
+  gsub("DATE",date_time) %>% 
   saveRDS(g, .)

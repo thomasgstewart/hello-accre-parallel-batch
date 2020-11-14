@@ -18,6 +18,6 @@ set.seed(args)
 sim_settings[args, c("miss_left", "capture", "miss_right")] <- Mreps(params)
 
 # Save to file
-outfile <- "./results/sim-results-" %|% Sys.Date() %|% "-" %|% sprintf("%03.0f", args) %|% ".rds"
+outfile <- "./results/sim-results-" %|% sprintf("%03.0f", args) %|% ".rds"
 saveRDS(sim_settings[args, ], file = outfile)
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --mail-user=thomas.stewart@vanderbilt.edu
+#SBATCH --mail-user=YOURNAME@vanderbilt.edu
 #SBATCH --mail-type=FAIL
 #SBATCH --ntasks=1
 #SBATCH --time=04:00:00

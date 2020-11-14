@@ -11,4 +11,4 @@ sim_settings <- expand.grid(
   )
 
 
-saveRDS(sim_settings, "sim-settings.RDS")
+saveRDS(sim_settings, "sim-settings.RDS", version = 2)
